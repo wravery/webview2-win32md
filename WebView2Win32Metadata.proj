@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.2.163-preview">
+
+  <PropertyGroup>
+    <OutputWinmd>bin\Microsoft.Web.WebView2.Win32.winmd</OutputWinmd>
+    <WinmdVersion>1.0.902.49</WinmdVersion>
+    <GenerateAssemblyVersionInfo>false</GenerateAssemblyVersionInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WebView2Headers Include="$(PkgMicrosoft_Web_WebView2)\**\*.h"/>
+    <WebView2Libs Include="$(PkgMicrosoft_Web_WebView2)\**\*.dll.lib"/>
+
+    <ImportLibs Include="@(WebView2Libs)">
+      <StaticLibs>WebView2Loader=WebView2LoaderStatic</StaticLibs>
+    </ImportLibs>
+
+    <Partition Include="main.cpp">
+      <TraverseFiles>@(WebView2Headers)</TraverseFiles>
+      <Namespace>Microsoft.Web.WebView2.Win32</Namespace>
+      <Exclude>CoreWebView2EnvironmentOptions</Exclude>
+    </Partition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="$(WinmdVersion)" GeneratePathProperty="true"/>
+  </ItemGroup>
+
+</Project>
