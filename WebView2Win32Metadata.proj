@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <OutputWinmd>bin\Microsoft.Web.WebView2.Win32.winmd</OutputWinmd>
-    <WinmdVersion>1.0.902.49</WinmdVersion>
+    <WinmdVersion>1.0.961.33</WinmdVersion>
     <GenerateAssemblyVersionInfo>false</GenerateAssemblyVersionInfo>
   </PropertyGroup>
 
