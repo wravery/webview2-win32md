@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.2.163-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.14.3-preview">
 
   <PropertyGroup>
     <OutputWinmd>bin\Microsoft.Web.WebView2.Win32.winmd</OutputWinmd>
-    <WinmdVersion>1.0.961.33</WinmdVersion>
+    <WinmdVersion>1.0.1020.30</WinmdVersion>
     <GenerateAssemblyVersionInfo>false</GenerateAssemblyVersionInfo>
   </PropertyGroup>
 
@@ -18,7 +18,7 @@
     <Partition Include="main.cpp">
       <TraverseFiles>@(WebView2Headers)</TraverseFiles>
       <Namespace>Microsoft.Web.WebView2.Win32</Namespace>
-      <Exclude>CoreWebView2EnvironmentOptions</Exclude>
+      <ExcludeFromCrossarch>true</ExcludeFromCrossarch>
     </Partition>
   </ItemGroup>
 
