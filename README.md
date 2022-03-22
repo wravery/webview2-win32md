@@ -13,7 +13,7 @@ The build may take a few minutes, but when it's done the winmd file should be in
 ## Updating the Metadata
 When new versions of the WebView2 SDK are released, you can update the version used to build the metadata by updating this version number in [WebView2Win32Metadata.proj](./WebView2Win32Metadata.proj):
 ```xml
-    <WinmdVersion>1.0.1108.44</WinmdVersion>
+    <WinmdVersion>1.0.1150.38</WinmdVersion>
 ```
 
 ## Dependencies
