@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.23.2-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.29.6-preview">
 
   <PropertyGroup>
     <OutputWinmd>bin\Microsoft.Web.WebView2.Win32.winmd</OutputWinmd>
-    <WinmdVersion>1.0.1210.39</WinmdVersion>
+    <WinmdVersion>1.0.1293.44</WinmdVersion>
     <GenerateAssemblyVersionInfo>false</GenerateAssemblyVersionInfo>
   </PropertyGroup>
 
   <ItemGroup>
-    <WebView2Headers Include="$(PkgMicrosoft_Web_WebView2)\**\*.h"/>
-    <WebView2Libs Include="$(PkgMicrosoft_Web_WebView2)\**\*.dll.lib"/>
+    <WebView2Headers Include="$(PkgMicrosoft_Web_WebView2)\build\native\include\*.h"/>
+    <WebView2Libs Include="$(PkgMicrosoft_Web_WebView2)\build\native\arm64\WebView2Loader.dll.lib;$(PkgMicrosoft_Web_WebView2)\build\native\x64\WebView2Loader.dll.lib;$(PkgMicrosoft_Web_WebView2)\build\native\x86\WebView2Loader.dll.lib"/>
 
     <ImportLibs Include="@(WebView2Libs)">
       <StaticLibs>WebView2Loader=WebView2LoaderStatic</StaticLibs>
