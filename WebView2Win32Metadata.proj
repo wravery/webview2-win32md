@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.49.21-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.53.14-preview">
 
   <PropertyGroup>
     <OutputWinmd>bin\Microsoft.Web.WebView2.Win32.winmd</OutputWinmd>
-    <WinmdVersion>1.0.1774.30</WinmdVersion>
+    <WinmdVersion>1.0.1938.49</WinmdVersion>
     <GenerateAssemblyVersionInfo>false</GenerateAssemblyVersionInfo>
   </PropertyGroup>
 
